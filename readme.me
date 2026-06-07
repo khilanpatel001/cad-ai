@@ -1,0 +1,17 @@
+Integrating the detailed system prompt from doc 2 into VLMAnalyzer — it was completely unused
+Structured confidence scoring on every extracted field (per doc 2's requirement)
+Multi-page analysis — currently only page 1 is sent; all pages will now be analyzed
+DFM analysis added to the VLM output schema
+Better JSON schema with source attribution and UNVERIFIED flagging
+Richer process routing prompt matching doc 2's detailed requirements
+
+
+# 1. Install dependencies (one time)
+pip install pdf2image pillow opencv-python-headless numpy pandas pydantic \
+            anthropic scikit-learn openpyxl networkx scipy
+
+# 2. Set your Anthropic API key
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+# 3. Run on your drawing
+python manufacturing_ai.py your_drawing.pdf
